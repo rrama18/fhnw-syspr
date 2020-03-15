@@ -1,4 +1,4 @@
-#include "nest.h"
+#include "heater.h"
 
 static int temp = MIN_TEMP;
 
@@ -10,15 +10,15 @@ static int min(int a, int b) {
     return a < b ? a : b;
 }
 
-int nest_temp() {
+int heater_temp() {
     printf("%d\n", temp);
     return temp;
 }
 
-void nest_up() {
+void heater_up() {
     temp = min(temp + 1, MAX_TEMP);
 }
 
-void nest_down() {
+void heater_down() {
     temp = max(temp - 1, MIN_TEMP);
 }
